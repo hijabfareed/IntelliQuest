@@ -1218,7 +1218,7 @@ if (mobileToggle && navMenu) {
 
     const toggleIcon = mobileToggle.querySelector("i");
     if (toggleIcon) {
-      toggleIcon.className = isMenuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars-staggered";
+      toggleIcon.className = isMenuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
     }
   });
   navMenu.querySelectorAll(".nav-link").forEach((navLink) => {
@@ -1229,7 +1229,7 @@ if (mobileToggle && navMenu) {
 
       const toggleIcon = mobileToggle.querySelector("i");
       if (toggleIcon) {
-        toggleIcon.className = "fa-solid fa-bars-staggered";
+        toggleIcon.className = "fa-solid fa-bars";
       }
     });
   });

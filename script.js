@@ -1215,22 +1215,14 @@ if (mobileToggle && navMenu) {
     const isMenuOpen = navMenu.classList.toggle("active");
     mobileToggle.setAttribute("aria-expanded", String(isMenuOpen));
     mobileToggle.setAttribute("aria-label", isMenuOpen ? "Close navigation menu" : "Open navigation menu");
-
-    const toggleIcon = mobileToggle.querySelector("i");
-    if (toggleIcon) {
-      toggleIcon.className = isMenuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-    }
+    mobileToggle.classList.toggle("is-open", isMenuOpen);
   });
   navMenu.querySelectorAll(".nav-link").forEach((navLink) => {
     navLink.addEventListener("click", () => {
       navMenu.classList.remove("active");
       mobileToggle.setAttribute("aria-expanded", "false");
       mobileToggle.setAttribute("aria-label", "Open navigation menu");
-
-      const toggleIcon = mobileToggle.querySelector("i");
-      if (toggleIcon) {
-        toggleIcon.className = "fa-solid fa-bars";
-      }
+      mobileToggle.classList.remove("is-open");
     });
   });
 }

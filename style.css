@@ -417,12 +417,43 @@ body {
   display: none;
   background: none;
   border: none;
-  font-size: 1.55rem;
-  line-height: 1;
   color: var(--accent-primary);
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  padding: 0;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  flex: 0 0 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+  transform-origin: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobile-toggle.is-open .hamburger-icon span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-toggle.is-open .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.is-open .hamburger-icon span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ================= 5. HERO SECTION ================= */
@@ -2162,11 +2193,6 @@ body {
     pointer-events: auto;
   }
 
-  .mobile-toggle i {
-    display: block;
-    line-height: 1;
-  }
-
   .nav-menu {
     display: flex;
     position: absolute;
@@ -2213,7 +2239,7 @@ body {
     background: var(--btn-hover-bg);
   }
   .mobile-toggle {
-    display: block;
+    display: inline-flex;
   }
   .quiz-grid {
     grid-template-columns: 1fr;

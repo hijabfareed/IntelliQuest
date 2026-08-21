@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntelliQuest — Advanced Developer & Engineering Assessment Platform</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <div class="logo-box">
+          <i class="fa-solid fa-code-branch"></i>
+        </div>
+        <span class="logo-text">Intelli<span>Quest</span></span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+        <li class="nav-item"><a href="#features" class="nav-link"><i class="fa-solid fa-shield-halved"></i><span>Platform Standards</span></a></li>
+        <li class="nav-item"><a href="#how-it-works" class="nav-link"><i class="fa-solid fa-route"></i><span>Diagnostic Flow</span></a></li>
+        <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-solid fa-book-open"></i><span>Curriculum</span></a></li>
+        <li class="nav-item"><a href="#feedback" class="nav-link"><i class="fa-solid fa-comment-dots"></i><span>Feedback</span></a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light and Dark Mode">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
+        <a href="#quizzes" class="btn btn-outline nav-cta">
+          <span>Assessment Track</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section" id="home">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          <span>ENTERPRISE-GRADE TECHNICAL BENCHMARKING</span>
+        </div>
+        <h1 class="hero-title">
+          Validate Engineering Depth Across <span>Modern Stacks</span>
+        </h1>
+        <p class="hero-subtitle">
+          IntelliQuest provides scenario-driven diagnostic assessments evaluating runtime internals, neural network calculus, applied AI pipelines, and mobile architectures.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#quizzes" class="btn btn-outline btn-lg">
+            <span>Explore Assessment Tracks</span>
+            <i class="fa-solid fa-terminal"></i>
+          </a>
+          <a href="#features" class="btn btn-outline-secondary btn-lg">
+            <span>Evaluation Criteria</span>
+            <i class="fa-solid fa-shield-halved"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>6 Tracks</h4>
+            <p>Specialized Domains</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <h4>100% Client-Side</h4>
+            <p>Zero-Latency Evaluation</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <h4>Deep Telemetry</h4>
+            <p>Scenario Rationales</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title"><i class="fa-solid fa-code"></i> diagnostic_runtime.js</span>
+            <span class="terminal-badge">STABLE ECMAScript</span>
+          </div>
+          <div class="terminal-body">
+            <div class="code-line"><span class="c-keyword">const</span> <span class="c-variable">assessment</span> <span class="c-operator">=</span> <span class="c-keyword">new</span> <span class="c-class">EngineeringAudit</span>({</div>
+            <div class="code-line indent"><span class="c-property">tracks</span>: [<span class="c-string">'JavaScript'</span>, <span class="c-string">'DeepLearning'</span>, <span class="c-string">'AppliedAI'</span>, <span class="c-string">'Flutter'</span>],</div>
+            <div class="code-line indent"><span class="c-property">mode</span>: <span class="c-string">'Strict_Scenario_Based'</span>,</div>
+            <div class="code-line indent"><span class="c-property">telemetry</span>: <span class="c-boolean">true</span></div>
+            <div class="code-line">});</div>
+            <div class="code-line terminal-output"><span class="c-comment">// Output: Ready to benchmark engineering proficiency...</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= QUIZ HUB SECTION ================= -->
+  <section class="section quiz-hub-section" id="quizzes">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">EVALUATION TRACKS</span>
+        <h2>Select Your Assessment Track</h2>
+        <p>Choose an engineering domain to benchmark execution context logic, neural architectures, or mobile system mechanics.</p>
+      </div>
+
+      <!-- Category Selection Cards -->
+      <div class="quiz-grid" id="quiz-grid">
+        <!-- Dynamically populated via script.js -->
+      </div>
+
+      <!-- Interactive Assessment Application Container -->
+      <div class="quiz-app-container hidden" id="quiz-app-container">
+        
+        <!-- STEP 2: INSTRUCTIONS SCREEN -->
+        <div class="quiz-view" id="instruction-view">
+          <div class="instruction-card">
+            <div class="instruction-header">
+              <span class="instruction-category-badge" id="inst-category">TRACK SYLLABUS</span>
+              <h3 id="inst-title">Assessment Guidelines</h3>
+              <p id="inst-description">Read each architectural scenario thoroughly before committing your evaluation choice.</p>
+            </div>
+            <div class="instruction-details">
+              <div class="detail-box">
+                <i class="fa-solid fa-microchip"></i>
+                <div>
+                  <small>Assessment Level</small>
+                  <strong>Senior / Advanced</strong>
+                </div>
+              </div>
+              <div class="detail-box">
+                <i class="fa-solid fa-cubes-stacked"></i>
+                <div>
+                  <small>Question Count</small>
+                  <strong id="inst-question-count">5 Items</strong>
+                </div>
+              </div>
+              <div class="detail-box">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <div>
+                  <small>Evaluation Metric</small>
+                  <strong>Conceptual Precision</strong>
+                </div>
+              </div>
+            </div>
+            <ul class="rule-list">
+              <li><i class="fa-solid fa-circle-check"></i> Scenarios evaluate memory references, runtime execution orders, and system tradeoffs.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Instant algorithmic and structural rationales provided immediately post-submission.</li>
+              <li><i class="fa-solid fa-circle-check"></i> A verified competency scorecard is generated upon completion of all track modules.</li>
+            </ul>
+            <div class="instruction-actions">
+              <button class="btn btn-outline-secondary" id="btn-back-hub">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Switch Assessment</span>
+              </button>
+              <button class="btn btn-outline" id="btn-begin-quiz">
+                <span>Begin Evaluation</span>
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: QUESTION PRESENTATION SCREEN -->
+        <div class="quiz-view hidden" id="question-view">
+          <div class="quiz-header-bar">
+            <div class="quiz-progress-meta">
+              <span class="track-badge" id="active-track-name">TRACK</span>
+              <span class="counter-text" id="question-counter">Question 1 of 5</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+          </div>
+
+          <div class="question-body">
+            <div class="question-prompt-container">
+              <div class="question-icon-badge">
+                <i class="fa-solid fa-code-branch"></i>
+              </div>
+              <h3 class="question-text" id="question-text">Loading diagnostic question prompt...</h3>
+            </div>
+
+            <!-- Answer Options Container -->
+            <div class="options-grid" id="options-container">
+              <!-- Dynamically generated toggle-style buttons -->
+            </div>
+
+            <!-- Explanation Feedback Box -->
+            <div class="explanation-box hidden" id="explanation-box">
+              <div class="explanation-header">
+                <i class="fa-solid fa-bolt-lightning"></i>
+                <strong>Architectural & Logical Rationale:</strong>
+              </div>
+              <p id="explanation-text"></p>
+            </div>
+          </div>
+
+          <div class="quiz-footer-bar">
+            <span class="hint-text"><i class="fa-solid fa-lock"></i> Selections are final once verified to maintain benchmark integrity</span>
+            <button class="btn btn-outline" id="btn-next-question" disabled>
+              <span>Next Scenario</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 4: FINAL RESULT & CERTIFICATE SCREEN -->
+        <div class="quiz-view hidden" id="result-view">
+          <div class="result-card">
+            <div class="result-header">
+              <div class="result-badge-icon">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <span class="badge">EVALUATION CONCLUDED</span>
+              <h2>Engineering Competency Scorecard</h2>
+              <p>Your technical execution metrics, conceptual depth, and mastery breakdown have been compiled.</p>
+            </div>
+
+            <div class="result-metrics-grid">
+              <div class="score-display-card">
+                <div class="score-circle">
+                  <span class="score-percent" id="score-percentage">0%</span>
+                  <small id="score-fraction">0 / 0 Correct</small>
+                </div>
+                <div class="grade-pill" id="performance-grade">Calculating...</div>
+              </div>
+
+              <div class="analytics-breakdown">
+                <h4>Diagnostic Breakdown</h4>
+                <div class="metric-row">
+                  <span>Verified Correct:</span>
+                  <strong class="text-success" id="correct-count">0</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Misaligned Options:</span>
+                  <strong class="text-danger" id="incorrect-count">0</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Execution Quality:</span>
+                  <strong class="text-accent" id="accuracy-rating">0% Precision</strong>
+                </div>
+                <div class="metric-row">
+                  <span>Competency Classification:</span>
+                  <strong id="competency-tier">Evaluating</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Attestation Box -->
+            <div class="certificate-box">
+              <small>VERIFIED TECHNICAL PROFICIENCY ATTESTATION</small>
+              <h4 id="cert-title">Software Engineering Track Attestation</h4>
+              <p>Officially attested for demonstrating advanced theoretical knowledge and practical debugging capabilities across production development scenarios.</p>
+              <div class="cert-footer">
+                <span>Attested Date: <strong id="cert-date">2026-08-20</strong></span>
+                <span class="cert-signature"><i class="fa-solid fa-circle-check"></i> IntelliQuest Diagnostic Engine</span>
+              </div>
+            </div>
+
+            <div class="result-actions">
+              <button class="btn btn-outline-secondary" id="btn-retake-quiz">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>Retake Track</span>
+              </button>
+              <button class="btn btn-outline" id="btn-return-hub">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>View All Tracks</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES / STANDARDS SECTION ================= -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">PLATFORM STANDARDS</span>
+        <h2>Designed for Technical Excellence</h2>
+        <p>Built strictly for software engineers who require rigorous validation rather than trivial syntax memorization.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-code-commit"></i></div>
+          <h3>Scenario-Driven Challenges</h3>
+          <p>Every problem tests how runtime internals, memory allocations, and asynchronous events behave in production setups.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>Deep Learning Rigor</h3>
+          <p>Examine mathematical foundations including backpropagation calculus, gradient vectors, and attention tensor transformations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-mobile-button"></i></div>
+          <h3>Flutter Architecture</h3>
+          <p>Assess widget render trees, element lifecycles, InheritedWidget mechanics, and asynchronous Dart streams.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Pure Client-Side Engine</h3>
+          <p>Zero server latency. In-memory state tracking delivers instantaneous execution feedback and clean isolation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DIAGNOSTIC FLOW SECTION ================= -->
+  <section class="section workflow-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">WORKFLOW</span>
+        <h2>How IntelliQuest Evaluates Engineers</h2>
+        <p>A systematic three-stage assessment process modeled after technical architecture audits.</p>
+      </div>
+
+      <div class="workflow-grid">
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <h4>Track Selection</h4>
+          <p>Choose your target specialty: Advanced JavaScript, Deep Learning, Applied AI Solutions, or Flutter Architecture.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <h4>Runtime Reasoning</h4>
+          <p>Analyze code snippets, identify race conditions, evaluate mathematical layers, and commit diagnostic options.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <h4>Attestation & Telemetry</h4>
+          <p>Review comprehensive architectural rationales and receive an engineering proficiency scorecard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="badge">CURRICULUM ARCHITECTURE</span>
+          <h2>Benchmarking the Next Generation of Software Engineers</h2>
+          <p>
+            IntelliQuest evaluates structural intuition, understanding of memory boundaries, framework lifecycle hooks, and neural network formulations.
+          </p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <i class="fa-solid fa-cube"></i>
+              <div>
+                <h4>V8 & Dart Runtime Internals</h4>
+                <p>Understand the call stack, microtask queues, and event dispatch pipelines at a native level.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <i class="fa-solid fa-network-wired"></i>
+              <div>
+                <h4>Neural Architecture &amp; Optimization</h4>
+                <p>Understand model design, transformer behavior, optimization methods, and regularization strategies across modern deep learning systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80" alt="Code analysis and engineering diagnostics" class="about-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       STUDENT FEEDBACK SECTION
+       ========================================================================
+
+       WHAT THIS SECTION DOES:
+       Provides a dedicated space for students to submit their assessment
+       feedback, rate their experience, and describe any issues or suggestions.
+
+       WHY THIS SECTION IS REQUIRED:
+       This component captures user sentiment and helps maintain the quality of
+       the evaluation experience. It is also part of the overall platform trust
+       and refinement cycle.
+
+       STRUCTURE:
+       - The outer section gives the component its page-level context.
+       - The feedback card wraps the entire form and keeps it visually balanced.
+       - The form contains the name, email, track, rating, and text area inputs.
+       - The submit button triggers validation and submission logic in JavaScript.
+
+       CONNECTION:
+       CSS handles the spacing, layout, responsiveness, and light/dark theme.
+       JavaScript handles validation, rating interaction, and submit behavior.
+       ======================================================================== -->
+  <section class="section feedback-section" id="feedback">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Student Feedback</span>
+        <h2>Share Your Assessment Experience</h2>
+        <p>Your feedback helps improve the quality, clarity, and relevance of each IntelliQuest evaluation module.</p>
+      </div>
+
+      <div class="feedback-shell">
+        <div class="feedback-card" aria-label="Student feedback card">
+          <form id="feedback-form" class="feedback-form" novalidate aria-label="Student feedback form">
+            <div class="feedback-form-grid">
+              <div class="field-group">
+                <label for="feedback-name">Student Name</label>
+                <input id="feedback-name" name="feedback-name" type="text" placeholder="Enter your full name" required aria-required="true">
+                <small class="field-error" data-error-for="feedback-name"></small>
+              </div>
+
+              <div class="field-group">
+                <label for="feedback-email">Email</label>
+                <input id="feedback-email" name="feedback-email" type="email" placeholder="name@example.com" aria-describedby="feedback-email-help">
+                <small class="field-error" data-error-for="feedback-email"></small>
+              </div>
+
+              <div class="field-group field-full">
+                <label for="feedback-track">Select a Track</label>
+                <select id="feedback-track" name="feedback-track" required aria-required="true">
+                  <option value="">Select a track</option>
+                  <option>JavaScript Mastery</option>
+                  <option>Deep Learning</option>
+                  <option>Applied AI &amp; Intelligent Systems</option>
+                  <option>Flutter App Development</option>
+                  <option>Databases</option>
+                  <option>Web Security &amp; Cybersecurity</option>
+                </select>
+                <small class="field-error" data-error-for="feedback-track"></small>
+              </div>
+
+              <div class="field-group field-full">
+                <label for="feedback-message">Feedback</label>
+                <textarea id="feedback-message" name="feedback-message" rows="4" placeholder="Tell us how the assessment experience felt and what could be improved." required aria-required="true"></textarea>
+                <small class="field-error" data-error-for="feedback-message"></small>
+              </div>
+
+              <div class="field-group field-full rating-field">
+                <div class="rating-row" aria-live="polite">
+                  <label class="rating-label" id="rating-label">Overall Rating</label>
+                  <span class="rating-helper" id="rating-helper-text">Good</span>
+                </div>
+
+                <div class="rating-stars" role="radiogroup" aria-label="Overall rating" aria-labelledby="rating-label">
+                  <label class="star-option" aria-label="1 star">
+                    <input type="radio" name="rating" value="1" aria-label="1 star">
+                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                  </label>
+                  <label class="star-option" aria-label="2 stars">
+                    <input type="radio" name="rating" value="2" aria-label="2 stars">
+                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                  </label>
+                  <label class="star-option" aria-label="3 stars">
+                    <input type="radio" name="rating" value="3" aria-label="3 stars">
+                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                  </label>
+                  <label class="star-option" aria-label="4 stars">
+                    <input type="radio" name="rating" value="4" aria-label="4 stars">
+                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                  </label>
+                  <label class="star-option" aria-label="5 stars">
+                    <input type="radio" name="rating" value="5" aria-label="5 stars">
+                    <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                  </label>
+                </div>
+                <small class="field-error" data-error-for="rating"></small>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-outline submit-feedback-btn" data-feedback-button aria-label="Submit feedback form">
+                  <span>Submit Feedback</span>
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-status" aria-live="polite"></div>
+          </form>
+
+          <div class="feedback-metrics">
+            <div class="metric-card metric-gain">
+              <div class="metric-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+              <div class="metric-value" id="learning-gain-value">+24%</div>
+              <div class="metric-label">Learning gain</div>
+            </div>
+
+            <div class="metric-card metric-position">
+              <div class="metric-icon"><i class="fa-solid fa-medal"></i></div>
+              <div class="metric-value" id="learning-position-value">+24%</div>
+              <div class="metric-label">Learning position</div>
+            </div>
+
+            <div class="metric-card metric-rate">
+              <div class="metric-dot-group">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="metric-value" id="performance-rate-value">74%</div>
+              <div class="metric-label">Performance rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="nav-logo">
+          <div class="logo-box">
+            <i class="fa-solid fa-code-branch"></i>
+          </div>
+          <span class="logo-text">Intelli<span>Quest</span></span>
+        </a>
+        <p>Developer-first diagnostic and engineering competency assessment platform designed for modern technical learning and evaluation.</p>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/hijab-fareed-1a4209329" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/hijabfareed" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/hf.stack" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Assessment Tracks</h4>
+        <ul>
+          <li><a href="#quizzes"><i class="fa-solid fa-code"></i> JavaScript Mastery</a></li>
+          <li><a href="#quizzes"><i class="fa-solid fa-network-wired"></i> Deep Learning</a></li>
+          <li><a href="#quizzes"><i class="fa-solid fa-brain"></i> Applied AI &amp; Intelligent Systems</a></li>
+          <li><a href="#quizzes"><i class="fa-solid fa-mobile-screen-button"></i> Flutter App Development</a></li>
+          <li><a href="#quizzes"><i class="fa-solid fa-database"></i> Databases</a></li>
+          <li><a href="#quizzes"><i class="fa-solid fa-shield-halved"></i> Web Security &amp; Cybersecurity</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#home"><i class="fa-solid fa-diagram-project"></i> Architecture Overview</a></li>
+          <li><a href="#features"><i class="fa-solid fa-clipboard-list"></i> Evaluation Standards</a></li>
+          <li><a href="#how-it-works"><i class="fa-solid fa-route"></i> Diagnostic Pipeline</a></li>
+          <li><a href="#about"><i class="fa-solid fa-book-open"></i> Curriculum</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i> Get in Touch</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-integrity">
+        <h4>Academic &amp; Industry Integrity</h4>
+        <p>Evaluated through pure client-side ECMAScript runtime. No persistent tracking or telemetry cookies required.</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 IntelliQuest. All Rights Reserved.</p>
+      <p>Designed &amp; Developed by <span>Hijab Fareed</span> | Ezitech Software House Internship Program</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

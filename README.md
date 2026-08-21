@@ -38,8 +38,10 @@ IntelliQuest/
 └── README.md      # Comprehensive platform documentation
 ---
 
-## 👩‍💻 Author & Attribution
--🐙 GitHub: https://github.com/hijabfareed
-- IntelliQuest Website Link: https://hijabfareed.github.io/IntelliQuest/
+
+### Author & IntelliQuest live Website Link
+ - Author: Hijab Fareed |
+ - GitHub Profile: https://github.com/hijabfareed
+ - IntelliQuest Live Website Link: https://hijabfareed.github.io/IntelliQuest/
 
 

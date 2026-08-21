@@ -40,6 +40,6 @@ IntelliQuest/
 
 ## 👩‍💻 Author & Attribution
 -🐙 GitHub: https://github.com/hijabfareed
-- Website Link/:https://github.io/hijabfareed/IntelliQuest/
+- IntelliQuest Website Link: https://hijabfareed.github.io/IntelliQuest/
 
 

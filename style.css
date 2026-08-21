@@ -2119,7 +2119,49 @@ body {
   }
 
   .nav-menu {
-    display: none;
+    display: flex;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 12px;
+    right: 12px;
+    z-index: 1001;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px;
+    list-style: none;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0 0 14px 14px;
+    box-shadow: var(--shadow-lg);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+
+  .nav-menu.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-menu .nav-item {
+    width: 100%;
+  }
+
+  .nav-menu .nav-link {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+  }
+
+  .nav-menu .nav-link:hover,
+  .nav-menu .nav-link.active {
+    background: var(--btn-hover-bg);
   }
   .mobile-toggle {
     display: block;

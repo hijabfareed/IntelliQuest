@@ -1212,7 +1212,29 @@ if (mobileToggle) {
     // WHAT THIS CODE DOES:
     // The class "active" is toggled on the navigation menu.
     // This changes the CSS display state for the mobile menu.
-    navMenu.classList.toggle("active");
+    const isMenuOpen = navMenu.classList.toggle("active");
+    mobileToggle.setAttribute("aria-expanded", String(isMenuOpen));
+    mobileToggle.setAttribute("aria-label", isMenuOpen ? "Close navigation menu" : "Open navigation menu");
+
+    const toggleIcon = mobileToggle.querySelector("i");
+    if (toggleIcon) {
+      toggleIcon.className = isMenuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars-staggered";
+    }
+  });
+}
+
+if (navMenu && mobileToggle) {
+  navMenu.querySelectorAll(".nav-link").forEach((navLink) => {
+    navLink.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      mobileToggle.setAttribute("aria-expanded", "false");
+      mobileToggle.setAttribute("aria-label", "Open navigation menu");
+
+      const toggleIcon = mobileToggle.querySelector("i");
+      if (toggleIcon) {
+        toggleIcon.className = "fa-solid fa-bars-staggered";
+      }
+    });
   });
 }
 

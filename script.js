@@ -1205,7 +1205,7 @@ btnReturnHub.addEventListener("click", returnToTrackHub);
 // Mobile navigation toggle
 const mobileToggle = document.getElementById("mobile-toggle");
 const navMenu = document.getElementById("nav-menu");
-if (mobileToggle) {
+if (mobileToggle && navMenu) {
   // WHAT THIS CODE DOES:
   // This event listener toggles the mobile navigation menu open and closed.
   mobileToggle.addEventListener("click", () => {
@@ -1221,9 +1221,6 @@ if (mobileToggle) {
       toggleIcon.className = isMenuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars-staggered";
     }
   });
-}
-
-if (navMenu && mobileToggle) {
   navMenu.querySelectorAll(".nav-link").forEach((navLink) => {
     navLink.addEventListener("click", () => {
       navMenu.classList.remove("active");

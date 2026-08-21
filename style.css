@@ -298,6 +298,7 @@ body {
   background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-sm);
+  overflow: visible;
 }
 
 .nav-container {
@@ -2068,9 +2069,11 @@ body {
     height: 66px;
     padding: 0 12px;
     gap: 8px;
+    overflow: visible;
   }
 
   .nav-logo {
+    flex: 1 1 auto;
     min-width: 0;
     gap: 7px;
   }
@@ -2084,11 +2087,16 @@ body {
   .logo-text {
     font-size: 1.15rem;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .nav-actions {
+    flex: 0 0 auto;
     gap: 6px;
     min-width: 0;
+    position: relative;
+    z-index: 1003;
   }
 
   .theme-toggle-btn {
@@ -2112,10 +2120,13 @@ body {
   }
 
   .mobile-toggle {
+    position: relative;
     width: 34px;
     height: 38px;
     padding: 0;
     flex-shrink: 0;
+    z-index: 1004;
+    pointer-events: auto;
   }
 
   .nav-menu {
@@ -2388,11 +2399,11 @@ body {
   }
 
   .logo-text {
-    font-size: 1rem;
+    font-size: 0.92rem;
   }
 
   .nav-cta {
-    width: 104px;
+    width: 94px;
     padding-left: 7px;
     padding-right: 7px;
     font-size: 0.7rem;
@@ -2442,7 +2453,7 @@ body {
   }
 
   .logo-text {
-    font-size: 0.88rem;
+    font-size: 0.78rem;
   }
 
   .nav-actions {
@@ -2450,7 +2461,7 @@ body {
   }
 
   .nav-cta {
-    width: 88px;
+    width: 82px;
     padding: 7px 5px;
     font-size: 0.64rem;
   }

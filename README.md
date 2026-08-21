@@ -40,7 +40,7 @@ IntelliQuest/
 
 
 ### Author & IntelliQuest live Website Link
- - Author: Hijab Fareed |
+ - Author: Hijab Fareed 
  - GitHub Profile: https://github.com/hijabfareed
  - IntelliQuest Live Website Link: https://hijabfareed.github.io/IntelliQuest/
 
